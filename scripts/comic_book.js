@@ -1,9 +1,8 @@
+const charSearch = "https://gateway.marvel.com/v1/public/characters"; //marvel endpoint
+const youtubeSearchUrl = "https://www.googleapis.com/youtube/v3/search"; //youtube endpoint
 
-const charSearch = "https://gateway.marvel.com/v1/public/characters";
-//const youtubeSearchUrl = "https://www.googleapis.com/youtube/v3/search"; 
-//let charName = null;
-
-function getData(keyword, callback){ //marvel
+// getting data from marvel and performing a CB function
+function getData(keyword, callback){ 
   const userQuery = {
     nameStartsWith: `${keyword}`,
     orderBy: "name",
@@ -15,16 +14,21 @@ function getData(keyword, callback){ //marvel
   $.getJSON(charSearch, userQuery, callback);
 }
 
-function displayData(data){ //marvel
+
+// callback function for getData for marvel data
+function displayData(data){
 	const showResults = data.data.results.map((value, index) => displayResult(value));
   	$(".js-results").html(showResults);
-  	//get101(data.data.results.name, displayVideo)
+    //if the data returned doesnt have any items
   	if(data.data.results.length === 0){ 
     $(".js-results").html("<h2>Sorry, your keyword didn't return any results. Please try again.</h2>");
   }
 }
 
-function displayResult(item){ //will create the markup for the results
+
+// invoked inside displayData - displays the result to the document
+function displayResult(item){
+  get101(item.name);
 	return `
 		<div class="charInfo">
 			<div class="charThumbnail">
@@ -42,33 +46,39 @@ function displayResult(item){ //will create the markup for the results
 				<p>Go to <a href="${item.urls[1].url}" target="_blank">Marvel's Wiki page</a> for more information on this character.</p>
 				<p>For available comics that you can purchase, please click <a href="${item.urls[item.urls.length-1].url}" target="_blank">here.</a></p>
 			</div>
-			<div class="charYoutube101">
+			<div id="charYoutube101" class="${item.name.replace(' ', '').replace('\(', '').replace('\)', '').replace('\'', '').replace('-', '').replace('/', '').replace(':', '').toLowerCase()}">
 			</div>
 		</div>
 	`
 }
 
-/*function get101(charName, callback){ //youtube
+
+// getting data from youtube and calling a function directly when mapping thru the data
+function get101(charName){
 	const userQuery = {
-    q: `${charName} marvel 101 in: title`,
+    q: `${charName} marvel 101 in:title`,
+    channelID: "UCvC4D8onUfXzvjTOM-dBfEA",
     part: "snippet",
     key: "AIzaSyClYmxQUfYLWr81myf1BaGDeAuGC-AmV0o",
     type: "video",
     maxResults: 1,
   };
-  $.getJSON(youtubeSearchUrl, userQuery, callback);
+  $.getJSON(youtubeSearchUrl, userQuery, function (data){
+    const showVideo = data.items.map((value, index) => displayVideo(value));
+    //$(`#charYoutube101.${charName.replace(/\s/g, '').toLowerCase()}`).html(showVideo);
+    $(`#charYoutube101.${charName.replace(' ', '').replace('\(', '').replace('\)', '').replace('\'', '').replace('-', '').replace('/', '').replace(':', '').toLowerCase()}`).html(showVideo);
+  });
 }
 
-function displayVideo(data){ //youtube
-	const showResults = data.items.map((value, index) => showVideo(value));
-  	$(".marvel101").html(showResults);
-}
 
-function showVideo(item){
+
+// invoked inside get101 - adds the result to the element with a specified class
+function displayVideo(item){
+  console.log(item.id.videoId);
 	return `
-	<iframe src="https://www.youtube.com/watch?v=${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+	<iframe src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
 	`
-}*/
+}
 
 function searchTheChar(){
   $(".js-query-form").submit(function (e){ //when search is clicked
