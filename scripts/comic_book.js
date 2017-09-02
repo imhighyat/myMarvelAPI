@@ -4,10 +4,9 @@ const youtubeSearchUrl = "https://www.googleapis.com/youtube/v3/search"; //youtu
 // getting data from marvel and performing a CB function
 function getData(keyword, callback){ 
   const userQuery = {
-    nameStartsWith: `marvel 101 ${keyword}`,
-    channelID: "UCvC4D8onUfXzvjTOM-dBfEA";
+    nameStartsWith: `{keyword}`,
     orderBy: "name",
-    limit: 20,
+    limit: 100,
     ts: 1,
     apikey: "58149727a1ccb3e2d0983beb68c219ac",
     hash: "9537e876fc1cc632440c7e9b3ab3fe7e"
@@ -57,7 +56,7 @@ function displayResult(item){
 // getting data from youtube and calling a function directly when mapping thru the data
 function get101(charName){
 	const userQuery = {
-    q: `${charName} marvel 101 in:title`,
+    q: `marvel 101 ${charName}`,
     channelID: "UCvC4D8onUfXzvjTOM-dBfEA",
     part: "snippet",
     key: "AIzaSyClYmxQUfYLWr81myf1BaGDeAuGC-AmV0o",
