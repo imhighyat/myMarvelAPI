@@ -4,7 +4,7 @@ const youtubeSearchUrl = "https://www.googleapis.com/youtube/v3/search"; //youtu
 // getting data from marvel and performing a CB function
 function getData(keyword, callback){ 
   const userQuery = {
-    nameStartsWith: `${keyword} marvel origin`,
+    nameStartsWith: `${keyword} marvel 101 in:title`,
     orderBy: "name",
     limit: 20,
     ts: 1,
