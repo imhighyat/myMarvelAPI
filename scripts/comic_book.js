@@ -56,7 +56,7 @@ function displayResult(item){
 // getting data from youtube and calling a function directly when mapping thru the data
 function get101(charName){
 	const userQuery = {
-    q: `${charName} marvel 101 in:title`,
+    q: `${charName} origin`,
     channelID: "UCvC4D8onUfXzvjTOM-dBfEA",
     part: "snippet",
     key: "AIzaSyClYmxQUfYLWr81myf1BaGDeAuGC-AmV0o",
