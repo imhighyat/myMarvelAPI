@@ -6,7 +6,7 @@ function getData(keyword, callback){
   const userQuery = {
     nameStartsWith: `${keyword}`,
     orderBy: "name",
-    limit: 20,
+    limit: 100,
     ts: 1,
     apikey: "58149727a1ccb3e2d0983beb68c219ac",
     hash: "9537e876fc1cc632440c7e9b3ab3fe7e"
@@ -56,6 +56,7 @@ function displayResult(item){
 // getting data from youtube and calling a function directly when mapping thru the data
 function get101(charName){
 	const userQuery = {
+<<<<<<< HEAD
     q: `${charName} origin`,
     channelID: "UCvC4D8onUfXzvjTOM-dBfEA",
     part: "snippet",
