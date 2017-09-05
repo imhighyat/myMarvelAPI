@@ -20,7 +20,7 @@ function displayData(data){
   	$(".js-results").html(showResults);
     //if the data returned doesnt have any items
   	if(data.data.results.length === 0){ 
-    $(".js-results").html("<h2>Sorry, your keyword didn't return any results. Please try again.</h2>");
+    $(".js-results").html(`<h2 class="js-no-results">Sorry, your keyword didn't return any results. Please try again.</h2>`);
   }
 }
 
@@ -42,11 +42,11 @@ function displayResult(item){
 					<li>Has been featured in ${item.stories.available} stories.</li>
 					<li>Has been featured in ${item.events.available} events.</li>
 				</ul>
-				<p>Go to <a href="${item.urls[1].url}" target="_blank">Marvel's Wiki page</a> for more information on this character.</p>
-				<p>For available comics that you can purchase, please click <a href="${item.urls[item.urls.length-1].url}" target="_blank">here.</a></p>
+				<p>Go to <a href="${item.urls[1].url}" class="marvelWiki" target="_blank">Marvel's Wiki page</a> for more information on this character.</p>
+				<p>For available comics that you can purchase, please click <a href="${item.urls[item.urls.length-1].url}" class="purchaseComics" target="_blank">here.</a></p>
 			</div>
-			<div id="charYoutube101" class="${item.name.replace(' ', '').replace('\(', '').replace('\)', '').replace('\'', '').replace('-', '').replace('/', '').replace(':', '').toLowerCase()}">
-			</div>
+      <div id="charYoutube101" class="${item.name.replace(' ', '').replace('\(', '').replace('\)', '').replace('\'', '').replace('-', '').replace('/', '').replace(':', '').toLowerCase()}">
+      </div>
 		</div>
 	`
 }
@@ -82,6 +82,7 @@ function displayVideo(item){
 function searchTheChar(){
   $(".js-query-form").submit(function (e){ //when search is clicked
     e.preventDefault(); //prevent submission of form
+    $("form").css("margin-bottom", "50px");
     const findInput = $(".js-query-form").find(".js-query"); //finds the input from user
     const getInputValue = findInput.val(); //store the input in a variable
     findInput.val(""); //clears the input after button is clicked

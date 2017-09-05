@@ -1,0 +1,179 @@
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+	/*border: 1px solid black;*/
+}
+
+body{
+	font-family: "Titillium Web";
+	/*background-color: WhiteSmoke;*/
+}
+
+header{
+	font-family: "Love Ya Like A Sister";
+	padding: 10px 30px;
+	margin: 35px 0;
+	height: 100px;
+}
+
+h1{
+	font-size: 50px;
+}
+
+.logo{
+	width: 50%;
+	float: left;
+}
+
+nav ul{
+	width: 50%;
+	height: 80px;
+	float: left;
+}
+
+nav li{
+	display: inline-block;
+	float: right;
+	margin: 25px 10px;
+	padding: 5px;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+header: after,
+header: before{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.comicImage{
+	width: 100%;
+	height: 100vh;
+}
+
+form{
+	text-align: center;
+	padding: 10px 0;
+	margin-bottom: 500px;
+}
+
+input{
+	height: 40px;
+	width: 250px;
+	margin-right: 5px;
+	border-radius: 10px;
+	outline: none;
+	padding: 0 10px;
+	font-family: "Love Ya Like A Sister";
+	font-weight: bolder;
+
+}
+
+button{
+	font-family: "Love Ya Like A Sister";
+	height: 40px;
+	width: 200px;
+	border-radius: 10px;
+	outline: none;
+	font-weight: bolder;
+	font-size: 16px;
+}
+
+footer{
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.marvel-link{
+	color: brown;
+	font-weight: bold;
+}
+
+button:hover{
+	background-color: #CF6253;
+}
+
+/*-------------------JS------------*/
+
+.js-no-results{
+	color: #2F4F4F;
+	font-family: "Love Ya Like A Sister";
+	text-align: center;
+	margin-bottom: 400px;
+}
+
+.charInfo:before,
+.charInfo:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.charInfo{
+	padding: 10px 20px;
+	margin: 100px 10px;
+}
+
+.charThumbnail{
+	padding-top: 40px;
+	padding-right: 50px;
+	width: 28%;
+	height: 330px;
+	float: left;
+	text-align: right;
+	border-right: 2px solid brown;
+}
+
+.charData{
+	text-align: center;
+	padding: 30px 20px;
+	width: 36%;
+	float: left;
+	height: 330px;
+}
+
+#charYoutube101{
+	width: 36%;
+	float: left;
+	height: 330px;
+	padding-top: 40px;
+	padding-left: 50px;
+	border-left: 2px solid brown;
+}
+
+.charThumbnail img{
+	width: 300px;
+	height: 250px;
+	box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .5);
+}
+
+iframe{
+	width: 450px;
+	height: 250px;
+	box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .5);
+}
+
+li{
+	list-style-type: none;
+}
+
+.currentPage{
+	border-bottom: 3px solid brown;
+}
+
+.charThumbnail img:hover{
+	filter: hue-rotate(250deg);
+	opacity: 0.8;
+
+}
+
+.marvelWiki, .purchaseComics{
+	color: brown;
+	font-weight: bold;
+}

@@ -2,23 +2,33 @@
 <html>
 	<head>
 		<title>Marvel Assemble! | Comic Books</title>
+		<link rel="stylesheet" type="text/css" href="css/comics.css">
+		<link href="https://fonts.googleapis.com/css?family=Abel|Cabin+Sketch|Fira+Sans|Love+Ya+Like+A+Sister|Oswald|Titillium+Web" rel="stylesheet">
 	</head>
 
 	<body>
-		<header>
-			<h1>Marvel Assemble</h1>
-			<p>Get to know your heroes.</p>
-			<p><a href="index.html">Back to Homepage</a></p>
-		</header>
-
-		<section>
-			<img src="img/comic_img.jpg">
+		<section class="imageHolder">
+			<img class="comicImage" src="img/comic_img.jpg">
 		</section>
 
+		<header>
+			<div class="logo">
+				<h1>Marvel Assemble!</h1>
+				<small>Get to know your heroes.</small>
+			</div>
+			<nav>
+				<ul>
+					<a href="tv_shows.html"><li>TV Shows</li></a>
+					<a href="movies.html"><li>Movies</li></a>
+					<a href="comic_books.html"><li class="currentPage">Comic Books</li></a>
+					<a href="index.html"><li>Home</li></a>
+				</ul>
+			</nav>
+		</header>
+
 		<form class="js-query-form">
-			<label for="character">Type in a character name</label>
-			<input type="text" name="character" placeholder="ex. iron man" class="js-query">
-			<button type="submit">Search</button>
+			<input type="text" name="character" placeholder="ex. iron man" class="js-query" required>
+			<button type="submit">Search for a character</button>
 		</form>
 
 		<main>
@@ -27,7 +37,7 @@
 		</main>
 
 		<footer>
-			<p><a href="http://marvel.com" target="_blank">Data provided by Marvel. © 2017 MARVEL</a></p>
+			<p>Data provided by <a class="marvel-link" href="http://marvel.com" target="_blank">Marvel</a>. © 2017 MARVEL</p>
 		</footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -9,15 +9,7 @@ body{
 	text-align: center;
 	font-family: 'Love Ya Like A Sister';
 	/*background-color: FloralWhite; Linen; WhiteSmoke*/
-	background-color:Linen ;
-}
-
-header{
-	
-}
-
-main{
-	
+	/*background-color: WhiteSmoke ;*/
 }
 
 .homeImage{
@@ -54,7 +46,7 @@ a{
 }
 
 .border-right{
-	border-right: 2px solid red;
+	border-right: 2px solid brown;
 }
 
 main:before,
@@ -75,7 +67,7 @@ img:hover{
 }
 
 .marvel-link{
-	color: red;
+	color: brown;
 	font-weight: bold;
 }
 section:hover{
