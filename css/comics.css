@@ -6,7 +6,7 @@
 }
 
 body{
-	font-family: "Titillium Web";
+	font-family: "Oswald";
 	/*background-color: WhiteSmoke;*/
 }
 
@@ -102,7 +102,6 @@ button:hover{
 /*-------------------JS------------*/
 
 .js-no-results{
-	color: #2F4F4F;
 	font-family: "Love Ya Like A Sister";
 	text-align: center;
 	margin-bottom: 400px;
@@ -136,6 +135,12 @@ button:hover{
 	width: 36%;
 	float: left;
 	height: 330px;
+	color: #3E3937;
+}
+
+.charData ul{
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 #charYoutube101{
@@ -176,4 +181,9 @@ li{
 .marvelWiki, .purchaseComics{
 	color: brown;
 	font-weight: bold;
+}
+
+h3{
+	font-family: "Love Ya Like A Sister";
+	color: brown;
 }
