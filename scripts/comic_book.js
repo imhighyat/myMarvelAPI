@@ -1,5 +1,4 @@
-const charSearch = "https://gateway.marvel.com/v1/public/characters"; //marvel endpoint
-const youtubeSearchUrl = "https://www.googleapis.com/youtube/v3/search"; //youtube endpoint
+
 
 // getting data from marvel and performing a CB function
 function getData(keyword, callback){ 
@@ -8,10 +7,10 @@ function getData(keyword, callback){
     orderBy: "name",
     limit: 100,
     ts: 1,
-    apikey: "58149727a1ccb3e2d0983beb68c219ac",
-    hash: "9537e876fc1cc632440c7e9b3ab3fe7e"
+    apikey: MARVEL_API_AUTH.KEY,
+    hash: MARVEL_API_AUTH.HASH
   };
-  $.getJSON(charSearch, userQuery, callback);
+  $.getJSON(CHAR_SEARCH, userQuery, callback);
 }
 
 
@@ -59,11 +58,11 @@ function get101(charName){
     q: `${charName} origin`,
     channelID: "UCvC4D8onUfXzvjTOM-dBfEA",
     part: "snippet",
-    key: "AIzaSyClYmxQUfYLWr81myf1BaGDeAuGC-AmV0o",
+    key: YOUTUBE_API_AUTH,
     type: "video",
     maxResults: 1,
   };
-  $.getJSON(youtubeSearchUrl, userQuery, function (data){
+  $.getJSON(YOUTUBE_SEARCH_URL, userQuery, function (data){
     const showVideo = data.items.map((value, index) => displayVideo(value));
     //$(`#charYoutube101.${charName.replace(/\s/g, '').toLowerCase()}`).html(showVideo);
     $(`#charYoutube101.${charName.replace(' ', '').replace('\(', '').replace('\)', '').replace('\'', '').replace('-', '').replace('/', '').replace(':', '').toLowerCase()}`).html(showVideo);
