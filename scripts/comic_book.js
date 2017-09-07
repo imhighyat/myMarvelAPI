@@ -1,5 +1,4 @@
 
-
 // getting data from marvel and performing a CB function
 function getData(keyword, callback){ 
   const userQuery = {
@@ -10,17 +9,17 @@ function getData(keyword, callback){
     apikey: MARVEL_API_AUTH.KEY,
     hash: MARVEL_API_AUTH.HASH
   };
-  $.getJSON(CHAR_SEARCH, userQuery, callback);
+  $.getJSON(MARVEL_SEARCH_URL, userQuery, callback);
 }
 
 
 // callback function for getData for marvel data
 function displayData(data){
 	const showResults = data.data.results.map((value, index) => displayResult(value));
-  	$(".js-results").html(showResults);
-    //if the data returned doesnt have any items
-  	if(data.data.results.length === 0){ 
-    $(".js-results").html(`<h2 class="js-no-results">Sorry, your keyword didn't return any results. Please try again.</h2>`);
+  $(".js-comic-results").html(showResults);
+  //if the data returned doesnt have any items
+  if(data.data.results.length === 0){ 
+    $(".js-comic-results").html(`<h2 class="js-no-results">Sorry, your keyword didn't return any results. Please try again.</h2>`);
   }
 }
 
@@ -64,7 +63,6 @@ function get101(charName){
   };
   $.getJSON(YOUTUBE_SEARCH_URL, userQuery, function (data){
     const showVideo = data.items.map((value, index) => displayVideo(value));
-    //$(`#charYoutube101.${charName.replace(/\s/g, '').toLowerCase()}`).html(showVideo);
     $(`#charYoutube101.${charName.replace(' ', '').replace('\(', '').replace('\)', '').replace('\'', '').replace('-', '').replace('/', '').replace(':', '').toLowerCase()}`).html(showVideo);
   });
 }
@@ -73,7 +71,6 @@ function get101(charName){
 
 // invoked inside get101 - adds the result to the element with a specified class
 function displayVideo(item){
-  console.log(item.id.videoId);
 	return `
 	<iframe src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
 	`

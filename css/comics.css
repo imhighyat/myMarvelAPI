@@ -7,7 +7,7 @@
 
 body{
 	font-family: "Oswald";
-	/*background-color: WhiteSmoke;*/
+	color: DimGray;
 }
 
 header{
@@ -19,6 +19,15 @@ header{
 
 h1{
 	font-size: 50px;
+}
+
+.power{
+	margin: 15px 0;
+}
+
+.powered-logo img{
+	height: 100px;
+	width: 100px;
 }
 
 .logo{
@@ -56,14 +65,15 @@ header: before{
 form{
 	text-align: center;
 	padding: 10px 0;
-	margin-bottom: 500px;
+	margin-bottom: 280px;
 }
 
 input{
 	height: 40px;
 	width: 250px;
 	margin-right: 5px;
-	border-radius: 10px;
+	border-style: none none solid none;
+	border-bottom: 2px solid brown;
 	outline: none;
 	padding: 0 10px;
 	font-family: "Love Ya Like A Sister";
@@ -73,6 +83,8 @@ input{
 
 button{
 	font-family: "Love Ya Like A Sister";
+	background-color: brown;
+	color: white;
 	height: 40px;
 	width: 200px;
 	border-radius: 10px;
@@ -83,11 +95,12 @@ button{
 
 footer{
 	text-align: center;
+	margin-bottom: 10px;
 }
 
 a{
 	text-decoration: none;
-	color: black;
+	color: DimGray;
 }
 
 .marvel-link{
@@ -135,7 +148,7 @@ button:hover{
 	width: 36%;
 	float: left;
 	height: 330px;
-	color: #3E3937;
+	color: DimGray;
 }
 
 .charData ul{
@@ -186,4 +199,53 @@ li{
 h3{
 	font-family: "Love Ya Like A Sister";
 	color: brown;
+}
+
+.sharesocial{
+  text-align: center;
+  margin: 30px auto;
+}
+
+.sharesocial a{
+  font-size: 30px;
+}
+
+.fa {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 25%;
+}
+
+.fa-facebook-square {
+  background-color: #3B5998;
+  color: white;
+}
+
+.fa-twitter-square {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.fa-google-plus-square {
+  background-color: #dd4b39;
+  color: white;
+}
+
+.fa-instagram {
+  background-color: #125688;
+  color: white;
+}
+
+.fa-pinterest-square {
+  background-color: #cb2027;
+  color: white;
+}
+
+.fa:hover{
+  filter: hue-rotate(180deg);
+  opacity: 0.8;
 }
