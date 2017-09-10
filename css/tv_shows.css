@@ -6,8 +6,10 @@
 }
 
 body{
+	min-width: 320px;
 	font-family: "Oswald";
-	color: DimGray;
+	background-color: #e7d2d2;
+	color: #595454;
 }
 
 header{
@@ -57,23 +59,16 @@ header: before{
 	clear: both;
 }
 
-.tvImage{
-	width: 100%;
+.imageHolder{
 	height: 100vh;
+	width: 100%;
+	background: url("../img/tv_img.jpg") no-repeat fixed;
+	background-size: cover;
 }
 
 a{
 	text-decoration: none;
 	color: DimGray;
-}
-
-.power{
-	margin: 15px 0;
-}
-
-.powered-logo img{
-	height: 100px;
-	width: 100px;
 }
 
 .currentPage{
@@ -82,26 +77,31 @@ a{
 
 footer{
 	text-align: center;
-	margin-bottom: 10px;
+	margin-top: 130px;
+	margin-bottom: 20px;
+}
+
+.power{
+	font-family: 'Love Ya Like A Sister';
+	font-size: 16px;
+	margin: 15px 0;
+	font-weight: bold;
+}
+
+.powered-logo img{
+	height: 60px;
+	width: 70px;
 }
 
 .sharesocial{
-  text-align: center;
-  margin: 30px auto;
+	margin-bottom: 30px;
 }
 
 .sharesocial a{
-  font-size: 30px;
-}
-
-.fa {
-  padding: 10px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 20px 2px;
-  border-radius: 25%;
+  	font-size: 18px;
+  	line-height: 18px;
+  	padding: 5px;
+  	border-radius: 20%;
 }
 
 .fa-facebook-square {
@@ -132,125 +132,4 @@ footer{
 .fa:hover{
   filter: hue-rotate(180deg);
   opacity: 0.8;
-}
-
-.movies{
-	border: 1px solid #deb3b3;
-	float: left;
-	width: 23%;
-	height: 400px;
-	text-align: center;
-	margin: 1%;
-	padding: 10px;
-	
-}
-
-.js-movies-result:before,
-.js-movies-result:after{
-	display: table;
-	content:"";
-	clear: both;
-}
-
-.js-hide{
-	display: none;
-}
-.poster{
-	width: 300px;
-	height: 300px;
-}
-
-.movies:hover{
-	box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .4);
-}
-
-/*----------modal--------------*/
-img.castPhoto{
-	width: 70px;
-	height: 100px;
-}
-
-.modal-cast li{
-	display: inline-block;
-	float: left;
-	width: 25%;
-	height: 200px;
-	text-align: center;
-	padding: 0 20px;
-}
-
-.modal-title{
-	font-family: "Love Ya Like A Sister";
-	color: #ff3939;
-}
-
-.modal-movie-detail{
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top:0;
-	left: 0;
-	overflow-y: scroll;
-	margin: 0 auto;
-	background-color: rgba(0, 0, 0, 0.90);
-
-	color: white;
-}
-
-.modal-movie-detail ul:before,
-.modal-movie-detail ul:after,
-.poster-video-container:before,
-.poster-video-container:after{
-	content: "";
-	display: table;
-	clear: both;
-
-}
-
-.poster-video-container{
-	text-align: center;
-}
-
-.poster-container{
-	width: 35%;
-	height: 400px;
-	float: left;
-	padding: 50px 0;
-	border-right: 2px solid #ff3939;
-}
-
-.video-container{
-	width: 65%;
-	height: 400px;
-	padding: 50px 0;
-	float: left;
-}
-
-.modal-js-poster{
-	width: 300px;
-	height: 300px;
-	padding-right: 20px;
-}
-
-iframe{
-	width: 700px;
-	height: 300px;
-	padding-left: 20px;
-}
-.movie-info{
-	text-align: center;
-	width: 60%;
-	margin: 20px auto;
-}
-
-.movie-cast{
-	padding: 20px 10px;
-}
-
-.close-modal{
-	padding: 10px;
-	color: white;
-	text-align: center;
-	height: 30px;
-	font-size: 30px;
 }

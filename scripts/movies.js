@@ -81,7 +81,7 @@ function closeClick(){
 function getCast(data){
 	$('.modal-movie-detail .modal-js-poster').attr("src", `http://image.tmdb.org/t/p/w500/${data.poster_path}`);
 	$('.modal-movie-detail .modal-title').text(data.title);
-	$('.modal-movie-detail .modal-overview').text(`Overview: ${data.overview}`);
+	$('.modal-movie-detail .modal-overview').text(`${data.overview}`);
 	$('.modal-movie-detail .modal-year').text(`Release date: ${data.release_date}`);
 	$('.modal-movie-detail .modal-runtime').text(`Runtime: ${data.runtime} minutes`);
 	$('.modal-movie-detail .modal-vote').text(`Average rating: ${data.vote_average}`);

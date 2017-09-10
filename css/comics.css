@@ -320,7 +320,7 @@ li{
 	.imageHolder{
 		height: 100vh;
 		width: 100%;
-		background: url("../img/comic_img_768.jpg") no-repeat center fixed;
+		background: url("../img/comic_img.jpg") no-repeat center fixed;
 		background-size: cover;
 	}
 
@@ -463,7 +463,11 @@ li{
 	.charThumbnail img{
 		width: 90%;
 		height: 90%;
-		box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .5);
+		box-shadow: none;
+	}
+
+	.charThumbnail img:hover{
+		box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .4);
 	}
 
 	iframe{

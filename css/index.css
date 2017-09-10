@@ -208,20 +208,11 @@ footer{
 	}
 
 	.powered-logo img{
-		height: 70px;
-		width: 100px;
+		height: 60px;
+		width: 70px;
 	}
 
-	.sharesocial{
-  		text-align: center;
-	}
 
-	.sharesocial a{
-  		font-size: 25px;
-  		line-height: 25px;
-  		padding: 5px;
-  		border-radius: 20%;
-	}
 
 	main:before,
 	main:after{

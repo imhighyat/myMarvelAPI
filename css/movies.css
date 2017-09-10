@@ -6,71 +6,55 @@
 }
 
 body{
+	min-width: 320px;
 	font-family: "Oswald";
-	color: DimGray;
+	background-color: #e7d2d2;
+	color: #595454;
 }
 
 header{
 	font-family: "Love Ya Like A Sister";
-	padding: 10px 30px;
-	margin: 35px 0;
 	height: 100px;
+	width: 100%;
+	text-align: center;
+}
+
+.logo, nav{
+	width: 100%;
 }
 
 h1{
-	font-size: 50px;
+	margin-top: 10px;
+	font-size: 30px;
+	height: 30px;
 }
 
-.pagination{
-	width: 30%;
-	height: 40px;
-	margin: 30px auto;
+small{
+	font-size: 10px;
 }
 
-#nextPage{
-	font-family: "Love Ya Like A Sister";
-    background-color: brown;
-    float: right;
-    color: white;
-    height: 40px;
-    width: 150px;
-    border-radius: 10px;
-    outline: none;
-    font-weight: bolder;
-    font-size: 16px;
-}
-
-#prevPage{
-	font-family: "Love Ya Like A Sister";
-    background-color: brown;
-    float: left;
-    color: white;
-    height: 40px;
-    width: 150px;
-    border-radius: 10px;
-    outline: none;
-    font-weight: bolder;
-    font-size: 16px;
-}
-
-.logo{
-	width: 50%;
-	float: left;
+.imageHolder{
+	height: 160px;
+	width: 100%;
+	background: url("../img/mcu_img_425.jpg") no-repeat top;
+	background-size: cover;
 }
 
 nav ul{
-	width: 50%;
-	height: 80px;
-	float: left;
+	height: 30px;
+	margin: 10px 0;
 }
 
 nav li{
 	display: inline-block;
-	float: right;
-	margin: 25px 10px;
-	padding: 5px;
+	margin: 5px 0;
 	font-weight: bolder;
-	font-size: 20px;
+	font-size: 13px;
+}
+
+nav a{
+	float: right;
+	width: 25%;
 }
 
 header: after,
@@ -80,18 +64,9 @@ header: before{
 	clear: both;
 }
 
-.comicImage{
-	width: 100%;
-	height: 100vh;
-}
-
-a{
-	text-decoration: none;
-	color: DimGray;
-}
-
-.currentPage{
-	border-bottom: 3px solid brown;
+main{
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 footer{
@@ -99,32 +74,26 @@ footer{
 	margin-bottom: 10px;
 }
 
-.power{
-	margin: 15px 0;
+a{
+	text-decoration: none;
+	color: #595454;
 }
 
-.powered-logo img{
-	height: 100px;
-	width: 100px;
+.currentPage{
+	border-bottom: 2px solid brown;
 }
 
 .sharesocial{
-  text-align: center;
-  margin: 30px auto;
+  	text-align: center;
+  	margin-top: 70px;
+  	margin-bottom: 10px;
 }
 
 .sharesocial a{
-  font-size: 30px;
-}
-
-.fa {
-  padding: 10px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 20px 2px;
-  border-radius: 25%;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 4px;
+  border-radius: 20%;
 }
 
 .fa-facebook-square {
@@ -152,60 +121,91 @@ footer{
   color: white;
 }
 
-.fa:hover{
-  filter: hue-rotate(180deg);
-  opacity: 0.8;
+.power{
+	margin: 20px 0;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Love Ya Like A Sister";
 }
 
-.movies{
-	border: 1px solid #deb3b3;
-	float: left;
-	width: 23%;
-	height: 400px;
-	text-align: center;
-	margin: 1%;
-	padding: 10px;
-	
+.powered-logo img{
+	height: 35px;
+	width: 35px;
 }
 
-.js-movies-result:before,
-.js-movies-result:after{
-	display: table;
-	content:"";
-	clear: both;
+.pagination{
+	width: 75%;
+	height: 12px;
+	margin: 10px auto;
+}
+
+#nextPage{
+	font-family: "Love Ya Like A Sister";
+    background-color: brown;
+    float: right;
+    color: white;
+    height: 25px;
+    width: 40%;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+#prevPage{
+	font-family: "Love Ya Like A Sister";
+    background-color: brown;
+    float: left;
+    color: white;
+    height: 25px;
+    width: 40%;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bolder;
+    font-size: 12px;
 }
 
 .js-hide{
 	display: none;
 }
-.poster{
-	width: 300px;
-	height: 300px;
+
+.js-movies-result:before,
+.js-movies-result:after,
+.movies:before,
+.movies:after{
+	display: table;
+	content:"";
+	clear: both;
 }
 
-.movies:hover{
-	box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .4);
-}
-
-/*----------modal--------------*/
-img.castPhoto{
-	width: 70px;
-	height: 100px;
-}
-
-.modal-cast li{
-	display: inline-block;
+.movies{
+	border: 1px solid #deb3b3;
+	width: 100%;
 	float: left;
-	width: 25%;
-	height: 200px;
+	height: 350px;
 	text-align: center;
-	padding: 0 20px;
+	padding: 5px;
+	margin-bottom: 10px;
 }
 
-.modal-title{
-	font-family: "Love Ya Like A Sister";
-	color: #ff3939;
+.poster{
+	width: 280px;
+	height: 280px;
 }
+
+.title{
+	font-size: 14px;
+    font-weight: bolder;
+    font-family: 'Love Ya Like A Sister';
+    color: brown;
+}
+
+.year{
+	font-size: 12px;
+    font-weight: bold;
+}
+
+/*---modal--*/
 
 .modal-movie-detail{
 	width: 100%;
@@ -214,66 +214,391 @@ img.castPhoto{
 	top:0;
 	left: 0;
 	overflow-y: scroll;
-	margin: 0 auto;
-	background-color: rgba(0, 0, 0, 0.90);
-
+	margin: 5px auto;
+	background-color: rgba(0, 0, 0, 0.9);
 	color: white;
-}
-
-.modal-movie-detail ul:before,
-.modal-movie-detail ul:after,
-.poster-video-container:before,
-.poster-video-container:after{
-	content: "";
-	display: table;
-	clear: both;
-
-}
-
-.poster-video-container{
-	text-align: center;
-}
-
-.poster-container{
-	width: 35%;
-	height: 400px;
-	float: left;
-	padding: 50px 0;
-	border-right: 2px solid #ff3939;
-}
-
-.video-container{
-	width: 65%;
-	height: 400px;
-	padding: 50px 0;
-	float: left;
-}
-
-.modal-js-poster{
-	width: 300px;
-	height: 300px;
-	padding-right: 20px;
-}
-
-iframe{
-	width: 700px;
-	height: 300px;
-	padding-left: 20px;
-}
-.movie-info{
-	text-align: center;
-	width: 60%;
-	margin: 20px auto;
-}
-
-.movie-cast{
-	padding: 20px 10px;
 }
 
 .close-modal{
-	padding: 10px;
-	color: white;
 	text-align: center;
-	height: 30px;
-	font-size: 30px;
+    font-size: 13px;
+    font-family: 'Love Ya Like A Sister';
 }
+
+.close-modal p{
+	color: #ff3939;
+	margin: 15px 0;
+	font-weight: bolder;
+}
+
+.poster-container{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	float: left;
+	margin-bottom: 15px;
+}
+
+.modal-js-poster{
+	width: 100px;
+	height: 100px;
+}
+
+.video-container{
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	float: left;
+	margin-bottom: 15px;
+}
+
+iframe{
+	width: 90%;
+	height: 200px;
+}
+
+.movie-info{
+	text-align: center;
+	margin: 10px auto;
+	width: 100%;
+}
+
+.movie-info:before{
+	display: table;
+	content:"";
+	clear: both;
+}
+
+.modal-title{
+	font-family: 'Love Ya Like A Sister';
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ff3939;
+}
+
+.modal-overview{
+	width: 80%;
+	margin: 5px auto;
+}
+
+.movie-info p{
+	font-size: 12px;
+}
+
+.movie-cast{
+	text-align: center;
+	width: 100%;
+	padding: 0 10px;
+}
+
+.movie-cast h3{
+	font-size: 16px;
+	color: #ff3939;
+	font-family: 'Love Ya Like A Sister';
+	margin: 5px auto;
+}
+
+.modal-cast li{
+	display: inline-block;
+	float: left;
+	width: 50%;
+    height: 150px;
+	text-align: center;
+	padding: 0 5px;
+	margin-bottom: 20px;
+}
+
+img.castPhoto{
+	width: 70px;
+	height: 100px;
+}
+
+li p{
+	font-size: 12px;
+}
+
+/*----MEDIA QUERIES----*/
+@media only screen and (min-width: 600px){
+	.imageHolder{
+		height: 200px;
+		width: 100%;
+		background: url("../img/mcu_img_768.jpg") no-repeat top;
+		background-size: cover;
+	}
+
+	header{
+		margin: 20px 0 40px 0;
+	}
+
+	h1{
+		font-size: 40px;
+		height: 40px;
+	}
+
+	small{
+	font-size: 12px;
+	}
+
+	nav ul{
+		height: 50px;
+		margin: 15px 0;
+	}
+
+	nav li{
+		font-size: 16px;
+	}
+
+	.sharesocial a{
+  		font-size: 18px;
+  		line-height: 18px;
+  		padding: 5px;
+  		border-radius: 20%;
+	}
+
+	.power{
+		font-size: 16px;
+	}
+
+	.powered-logo img{
+		height: 50px;
+		width: 60px;
+	}
+
+	.pagination{
+		width: 50%;
+		height: 35px;
+		margin: 10px auto;
+	}
+
+	#nextPage,
+	#prevPage{
+		height: 35px;
+		width: 30%;
+		font-size: 16px;
+	}
+
+	.movies{
+		width: 50%;
+		height: 300px;
+		padding: 10px;
+	}
+
+	.poster{
+		width: 230px;
+		height: 230px;
+	}
+	/*-----modal---*/
+	.close-modal{
+    	font-size: 18px;
+	}
+
+	.poster-container{
+		height: 200px;
+	}
+
+	.modal-js-poster{
+		width: 200px;
+		height: 200px;
+	}
+
+	.video-container{
+		height: 300px;
+	}
+
+	iframe{
+		width: 500px;
+		height: 300px;
+	}
+
+	.modal-title{
+    	font-size: 18px;
+    	margin-bottom: 10px;
+	}
+
+	.modal-overview{
+		margin: 10px auto;
+	}
+
+	.movie-info p{
+		font-size: 14px;
+	}
+
+	.movie-cast h3{
+		font-size: 18px;
+    	margin: 20px 0;
+	}
+
+	.modal-cast li{
+		width: 33.33%;
+		height: 170px;
+	}
+
+	li p{
+		font-size: 14px;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	.imageHolder{
+		height: 100vh;
+		width: 100%;
+		background: url("../img/mcu_img.jpg") no-repeat center fixed;
+		background-size: cover;
+	}
+
+	header{
+		padding: 10px 30px;
+		margin: 20px 0;
+		height: 100px;
+		text-align: left;
+	}
+
+	h1{
+		font-size: 50px;
+		height: 55px;
+	}
+
+	.powered-logo img{
+		height: 60px;
+		width: 70px;
+	}
+
+	.logo{
+		width: 50%;
+		float: left;
+	}
+
+	small{
+		font-size: 14px;
+	}
+
+	nav ul{
+		width: 50%;
+		height: 80px;
+		float: left;
+	}
+
+	nav li{
+		float: right;
+		margin: 25px 10px;
+		padding: 5px;
+		font-size: 20px;
+		font-weight: bolder;
+	}
+
+	nav a{
+		float: none;
+	}
+
+	.pagination{
+		width: 30%;
+		height: 40px;
+		margin: 30px auto;
+	}
+
+	#nextPage,
+	#prevPage{
+    	height: 40px;
+    	width: 150px;
+	}
+
+	.title{
+		padding-top: 10px;
+		font-size: 18px;
+	}
+
+	.year{
+		font-size: 14px;
+	}
+
+	.movies{
+		width: 23%;
+		height: 400px;
+		margin: 1%;
+	}
+
+	.poster{
+		width: 300px;
+		height: 300px;
+	}
+
+	.movies:hover{
+		box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .4);
+	}
+
+	.fa:hover{
+  		filter: hue-rotate(180deg);
+  		opacity: 0.8;
+	}
+
+	/*---modal---*/
+	.close-modal{
+		padding: 10px;
+		height: 30px;
+		font-size: 30px;
+	}
+
+	.modal-cast li{
+		width: 25%;
+		height: 200px;
+		padding: 0 20px;
+	}
+
+	.modal-title{
+		color: #ff3939;
+	}
+
+	.modal-movie-detail ul:before,
+	.modal-movie-detail ul:after,
+	.poster-video-container:before,
+	.poster-video-container:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.poster-video-container{
+		text-align: center;
+	}
+
+	.poster-container{
+		width: 35%;
+		height: 400px;
+		float: left;
+		padding: 60px 0;
+		border-right: 2px solid #ff3939;
+	}
+
+	.video-container{
+		width: 65%;
+		height: 400px;
+		padding: 20px 0;
+		float: left;
+	}
+
+	.modal-js-poster{
+		width: 300px;
+		height: 300px;
+		padding-right: 20px;
+	}
+
+	iframe{
+		width: 650px;
+		height: 350px;
+		padding-left: 20px;
+	}
+
+	.movie-info{
+		width: 70%;
+		margin: 20px auto;
+	}
+
+	.movie-info p, li p{
+		font-size: 16px;
+	}
+
+	.movie-cast{
+		padding: 20px 10px;
+	}
+}
+
