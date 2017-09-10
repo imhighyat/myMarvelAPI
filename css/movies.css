@@ -214,7 +214,7 @@ a{
 	top:0;
 	left: 0;
 	overflow-y: scroll;
-	margin: 5px auto;
+	margin: 0 auto;
 	background-color: rgba(0, 0, 0, 0.9);
 	color: white;
 }
