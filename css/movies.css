@@ -19,7 +19,7 @@ header{
 	text-align: center;
 }
 
-.logo, nav{
+nav{
 	width: 100%;
 }
 
@@ -31,13 +31,6 @@ h1{
 
 small{
 	font-size: 10px;
-}
-
-.imageHolder{
-	height: 160px;
-	width: 100%;
-	background: url("../img/mcu_img_425.jpg") no-repeat top;
-	background-size: cover;
 }
 
 nav ul{
@@ -57,13 +50,6 @@ nav a{
 	width: 25%;
 }
 
-header: after,
-header: before{
-	content: "";
-	display: table;
-	clear: both;
-}
-
 main{
 	padding-left: 10px;
 	padding-right: 10px;
@@ -77,6 +63,22 @@ footer{
 a{
 	text-decoration: none;
 	color: #595454;
+}
+
+.topImage{
+	height: 160px;
+	width: 100%;
+	background: url("../img/home_movies.png") no-repeat center;
+	background-size: contain;
+	background-color: black;
+}
+
+.moviesImage, .moviesText{
+	display: none;
+}
+
+.logo{
+	width: 100%;
 }
 
 .currentPage{
@@ -121,18 +123,6 @@ a{
   color: white;
 }
 
-.power{
-	margin: 20px 0;
-	font-size: 12px;
-	font-weight: bold;
-	font-family: "Love Ya Like A Sister";
-}
-
-.powered-logo img{
-	height: 35px;
-	width: 35px;
-}
-
 .pagination{
 	width: 75%;
 	height: 12px;
@@ -165,17 +155,29 @@ a{
     font-size: 12px;
 }
 
-.js-hide{
-	display: none;
+.power{
+	margin: 20px 0;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Love Ya Like A Sister";
 }
 
-.js-movies-result:before,
-.js-movies-result:after,
-.movies:before,
-.movies:after{
+.powered-logo{
+	height: 35px;
+	width: 35px;
+}
+
+header: after,
+header: before{
+	content: "";
 	display: table;
-	content:"";
 	clear: both;
+}
+
+/*--JS RESULTS--*/
+
+.js-hide{
+	display: none;
 }
 
 .movies{
@@ -205,7 +207,24 @@ a{
     font-weight: bold;
 }
 
-/*---modal--*/
+.js-movies-result:before,
+.js-movies-result:after,
+.movies:before,
+.movies:after{
+	display: table;
+	content:"";
+	clear: both;
+}
+
+/*---MODAL--*/
+iframe{
+	width: 90%;
+	height: 200px;
+}
+
+li p{
+	font-size: 12px;
+}
 
 .modal-movie-detail{
 	width: 100%;
@@ -226,9 +245,17 @@ a{
 }
 
 .close-modal p{
-	color: #ff3939;
+	position: fixed;
+	background-color: #ff3939;
+	color: white;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	line-height: 20px;
 	margin: 15px 0;
+	margin-left: 85%;
 	font-weight: bolder;
+	font-size: large;
 }
 
 .poster-container{
@@ -236,7 +263,7 @@ a{
 	height: 100px;
 	text-align: center;
 	float: left;
-	margin-bottom: 15px;
+	margin: 50px 0 15px 0;
 }
 
 .modal-js-poster{
@@ -251,22 +278,10 @@ a{
 	float: left;
 	margin-bottom: 15px;
 }
-
-iframe{
-	width: 90%;
-	height: 200px;
-}
-
 .movie-info{
 	text-align: center;
 	margin: 10px auto;
 	width: 100%;
-}
-
-.movie-info:before{
-	display: table;
-	content:"";
-	clear: both;
 }
 
 .modal-title{
@@ -313,19 +328,14 @@ img.castPhoto{
 	height: 100px;
 }
 
-li p{
-	font-size: 12px;
+.movie-info:before{
+	display: table;
+	content:"";
+	clear: both;
 }
 
-/*----MEDIA QUERIES----*/
+/*----FOR TABLETS----*/
 @media only screen and (min-width: 600px){
-	.imageHolder{
-		height: 200px;
-		width: 100%;
-		background: url("../img/mcu_img_768.jpg") no-repeat top;
-		background-size: cover;
-	}
-
 	header{
 		margin: 20px 0 40px 0;
 	}
@@ -348,33 +358,14 @@ li p{
 		font-size: 16px;
 	}
 
-	.sharesocial a{
-  		font-size: 18px;
-  		line-height: 18px;
-  		padding: 5px;
-  		border-radius: 20%;
+	.imageHolder{
+		height: 100%;
+		width: 60%;
+		margin: 0 auto;
 	}
 
-	.power{
-		font-size: 16px;
-	}
-
-	.powered-logo img{
-		height: 50px;
-		width: 60px;
-	}
-
-	.pagination{
-		width: 50%;
-		height: 35px;
-		margin: 10px auto;
-	}
-
-	#nextPage,
-	#prevPage{
-		height: 35px;
-		width: 30%;
-		font-size: 16px;
+	.topImage{
+		height: 250px;
 	}
 
 	.movies{
@@ -387,9 +378,46 @@ li p{
 		width: 230px;
 		height: 230px;
 	}
-	/*-----modal---*/
-	.close-modal{
-    	font-size: 18px;
+
+	.sharesocial a{
+  		font-size: 18px;
+  		line-height: 18px;
+  		padding: 5px;
+	}
+
+	.power{
+		font-size: 16px;
+	}
+
+	.powered-logo{
+		height: 50px;
+		width: 60px;
+	}
+
+	.pagination{
+		width: 50%;
+		height: 35px;
+	}
+
+	#nextPage,
+	#prevPage{
+		height: 35px;
+		width: 30%;
+		font-size: 16px;
+	}
+
+	/*--MODAL--*/
+	iframe{
+		width: 500px;
+		height: 300px;
+	}
+
+	li p{
+		font-size: 14px;
+	}
+
+	.close-modal p{
+		margin-left: 90%;
 	}
 
 	.poster-container{
@@ -402,11 +430,6 @@ li p{
 	}
 
 	.video-container{
-		height: 300px;
-	}
-
-	iframe{
-		width: 500px;
 		height: 300px;
 	}
 
@@ -432,40 +455,19 @@ li p{
 		width: 33.33%;
 		height: 170px;
 	}
-
-	li p{
-		font-size: 14px;
-	}
 }
 
+/*----FOR LAPTOPS----*/
 @media only screen and (min-width: 1024px){
-	.imageHolder{
-		height: 100vh;
-		width: 100%;
-		background: url("../img/mcu_img.jpg") no-repeat center fixed;
-		background-size: cover;
-	}
-
 	header{
 		padding: 10px 30px;
 		margin: 20px 0;
-		height: 100px;
 		text-align: left;
 	}
 
 	h1{
 		font-size: 50px;
 		height: 55px;
-	}
-
-	.powered-logo img{
-		height: 60px;
-		width: 70px;
-	}
-
-	.logo{
-		width: 50%;
-		float: left;
 	}
 
 	small{
@@ -483,11 +485,40 @@ li p{
 		margin: 25px 10px;
 		padding: 5px;
 		font-size: 20px;
-		font-weight: bolder;
 	}
 
 	nav a{
 		float: none;
+	}
+
+	.topImage{
+		background-image: none;
+		height: 350px;
+  		cursor: url('../img/hammer_cursor.png'), auto;
+	}
+
+	.imageHolder{
+		position:relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.moviesImage{
+		display: initial;
+		height: 100%;
+		width: 100%;
+	}
+
+	.moviesText{
+		font-family: 'Love Ya Like A Sister';
+		display: initial;
+		color: brown;
+  		transition: .4s ease;
+  		opacity: 0;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
 	}
 
 	.pagination{
@@ -520,6 +551,17 @@ li p{
 	.poster{
 		width: 90%;
 		height: 80%;
+		cursor: url('../img/mini-hammer.png'), auto;
+	}
+
+	.powered-logo{
+		height: 60px;
+		width: 70px;
+	}
+
+	.logo{
+		width: 50%;
+		float: left;
 	}
 
 	.movies:hover{
@@ -531,30 +573,49 @@ li p{
   		opacity: 0.8;
 	}
 
+	#nextPage:hover,
+	#prevPage:hover{
+		background-color: #CF6253;
+	}
+
+	.imageHolder:hover .moviesImage{
+  		opacity: 0.2;
+	}
+
+	.imageHolder:hover .moviesText{
+  		opacity: 1;
+  		font-size: 100px;
+	}
+
 	/*---modal---*/
+	iframe{
+		width: 650px;
+		height: 350px;
+		padding-left: 20px;
+		margin-top: 60px;
+	}
+
+	li p{
+		font-size: 16px;
+	}
+
 	.close-modal{
 		padding: 10px;
 		height: 30px;
 		font-size: 30px;
 	}
 
+	.close-modal p{
+		height: 30px;
+    	width: 30px;
+    	line-height: 30px;
+    	font-size: 30px;
+	}
+
 	.modal-cast li{
 		width: 25%;
 		height: 200px;
 		padding: 0 20px;
-	}
-
-	.modal-title{
-		color: #ff3939;
-	}
-
-	.modal-movie-detail ul:before,
-	.modal-movie-detail ul:after,
-	.poster-video-container:before,
-	.poster-video-container:after{
-		content: "";
-		display: table;
-		clear: both;
 	}
 
 	.poster-video-container{
@@ -582,23 +643,30 @@ li p{
 		padding-right: 20px;
 	}
 
-	iframe{
-		width: 650px;
-		height: 350px;
-		padding-left: 20px;
-	}
-
 	.movie-info{
 		width: 70%;
 		margin: 20px auto;
 	}
 
-	.movie-info p, li p{
+	.movie-info p{
 		font-size: 16px;
 	}
 
 	.movie-cast{
 		padding: 20px 10px;
 	}
-}
 
+	.close-modal p:hover{
+		color: #ff3939;
+		background-color: white;
+	}
+
+	.modal-movie-detail ul:before,
+	.modal-movie-detail ul:after,
+	.poster-video-container:before,
+	.poster-video-container:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

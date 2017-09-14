@@ -14,94 +14,96 @@ body{
 
 header{
 	font-family: "Love Ya Like A Sister";
-	padding: 10px 30px;
-	margin: 35px 0;
 	height: 100px;
-}
-
-h1{
-	font-size: 50px;
-}
-
-main{
-	font-size: 50px;
-	color: brown;
-	padding: 100px 0;
-	height: 280px;
-	font-family: "Love Ya Like A Sister";
+	width: 100%;
 	text-align: center;
 }
 
-.logo{
-	width: 50%;
-	float: left;
+nav{
+	width: 100%;
+}
+
+h1{
+	margin-top: 10px;
+	font-size: 30px;
+	height: 30px;
+}
+
+small{
+	font-size: 10px;
 }
 
 nav ul{
-	width: 50%;
-	height: 80px;
-	float: left;
+	height: 30px;
+	margin: 10px 0;
 }
 
 nav li{
 	display: inline-block;
-	float: right;
-	margin: 25px 10px;
-	padding: 5px;
+	margin: 5px 0;
 	font-weight: bolder;
-	font-size: 20px;
+	font-size: 13px;
 }
 
-header: after,
-header: before{
-	content: "";
-	display: table;
-	clear: both;
+nav a{
+	float: right;
+	width: 25%;
 }
 
-.imageHolder{
-	height: 100vh;
-	width: 100%;
-	background: url("../img/tv_img.jpg") no-repeat fixed;
-	background-size: cover;
-}
-
-a{
-	text-decoration: none;
-	color: DimGray;
-}
-
-.currentPage{
-	border-bottom: 3px solid brown;
+main{
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 footer{
 	text-align: center;
-	margin-top: 130px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
-.power{
+a{
+	text-decoration: none;
+	color: #595454;
+}
+
+h2{
 	font-family: 'Love Ya Like A Sister';
-	font-size: 16px;
-	margin: 15px 0;
-	font-weight: bold;
+	margin-top: 30px;
+	color: brown;
+	font-size: 20px;
+	text-align: center;
 }
 
-.powered-logo img{
-	height: 60px;
-	width: 70px;
+.topImage{
+	height: 160px;
+	width: 100%;
+	background: url("../img/home_tv.jpg") no-repeat center;
+	background-size: cover;
+	background-color: black;
+}
+
+.tvImage, .tvText{
+	display: none;
+}
+
+.logo{
+	width: 100%;
+}
+
+.currentPage{
+	border-bottom: 2px solid brown;
 }
 
 .sharesocial{
-	margin-bottom: 30px;
+  	text-align: center;
+  	margin-top: 70px;
+  	margin-bottom: 10px;
 }
 
 .sharesocial a{
-  	font-size: 18px;
-  	line-height: 18px;
-  	padding: 5px;
-  	border-radius: 20%;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 4px;
+  border-radius: 20%;
 }
 
 .fa-facebook-square {
@@ -129,7 +131,170 @@ footer{
   color: white;
 }
 
-.fa:hover{
-  filter: hue-rotate(180deg);
-  opacity: 0.8;
+.power{
+	margin: 20px 0;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Love Ya Like A Sister";
+}
+
+.powered-logo{
+	height: 35px;
+	width: 35px;
+}
+
+header: after,
+header: before{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*----FOR TABLETS----*/
+@media only screen and (min-width: 600px){
+	header{
+		margin: 20px 0 40px 0;
+	}
+
+	h1{
+		font-size: 40px;
+		height: 40px;
+	}
+
+	h2{
+		font-size: 30px;
+	}
+
+	small{
+	font-size: 12px;
+	}
+
+	nav ul{
+		height: 50px;
+		margin: 15px 0;
+	}
+
+	nav li{
+		font-size: 16px;
+	}
+
+	.imageHolder{
+		height: 100%;
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.topImage{
+		height: 250px;
+
+	}
+
+	.sharesocial a{
+  		font-size: 18px;
+  		line-height: 18px;
+  		padding: 5px;
+	}
+
+	.power{
+		font-size: 16px;
+	}
+
+	.powered-logo{
+		height: 50px;
+		width: 60px;
+	}
+
+/*----FOR LAPTOPS----*/
+@media only screen and (min-width: 1024px){
+	header{
+		padding: 10px 30px;
+		margin: 20px 0;
+		text-align: left;
+	}
+
+	h1{
+		font-size: 50px;
+		height: 55px;
+	}
+
+	h2{
+		font-size: 50px;
+	}
+
+	small{
+		font-size: 14px;
+	}
+
+	nav ul{
+		width: 50%;
+		height: 80px;
+		float: left;
+	}
+
+	nav li{
+		float: right;
+		margin: 25px 10px;
+		padding: 5px;
+		font-size: 20px;
+	}
+
+	nav a{
+		float: none;
+	}
+
+	.topImage{
+		background-image: none;
+		height: 350px;
+  		cursor: url('../img/hammer_cursor.png'), auto;
+
+	}
+
+	.tvImage{
+		display: initial;
+		height: 100%;
+		width: 100%;
+		border-radius: 15%;
+	}
+
+	.imageHolder{
+		position:relative;
+		width: 80%;
+		height: 100%;
+	}
+
+	.tvText{
+		font-family: 'Love Ya Like A Sister';
+		display: initial;
+		color: brown;
+  		transition: .4s ease;
+  		opacity: 0;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+	}
+
+	.powered-logo{
+		height: 60px;
+		width: 70px;
+	}
+
+	.logo{
+		width: 50%;
+		float: left;
+	}
+
+	.fa:hover{
+  		filter: hue-rotate(180deg);
+  		opacity: 0.8;
+	}
+
+	.imageHolder:hover .tvImage{
+  		opacity: 0.2;
+	}
+
+	.imageHolder:hover .tvText{
+  		opacity: 1;
+  		font-size: 90px;
+	}
 }

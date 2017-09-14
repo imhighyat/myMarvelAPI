@@ -5,13 +5,6 @@
 	/*border: 1px solid black;*/
 }
 
-body{
-	min-width: 320px;
-	font-family: "Oswald";
-	background-color: #e7d2d2;
-	color: #595454;
-}
-
 header{
 	font-family: "Love Ya Like A Sister";
 	height: 100px;
@@ -19,8 +12,11 @@ header{
 	text-align: center;
 }
 
-.logo, nav{
-	width: 100%;
+body{
+	min-width: 320px;
+	font-family: "Oswald";
+	background-color: #e7d2d2;
+	color: #595454;
 }
 
 h1{
@@ -31,13 +27,6 @@ h1{
 
 small{
 	font-size: 10px;
-}
-
-.imageHolder{
-	height: 160px;
-	width: 100%;
-	background: url("../img/comic_img_420.jpg") no-repeat top;
-	background-size: cover;
 }
 
 nav ul{
@@ -55,13 +44,6 @@ nav li{
 nav a{
 	float: right;
 	width: 25%;
-}
-
-header: after,
-header: before{
-	content: "";
-	display: table;
-	clear: both;
 }
 
 form{
@@ -100,23 +82,38 @@ main{
 	padding-right: 10px;
 }
 
-footer{
-	text-align: center;
-	margin-bottom: 10px;
-}
-
 a{
 	text-decoration: none;
 	color: #595454;
 }
 
-.marvelWiki, .purchaseComics{
-	color: brown;
-	font-weight: bold;
+footer{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.logo, nav{
+	width: 100%;
 }
 
 .currentPage{
 	border-bottom: 2px solid brown;
+}
+
+.topImage{
+	height: 160px;
+	width: 100%;
+	background: url("../img/comics.jpg") no-repeat top;
+	background-size: cover;
+}
+
+.comicsImage, .comicsText{
+	display: none;
+}
+
+.marvelWiki, .purchaseComics{
+	color: brown;
+	font-weight: bold;
 }
 
 .sharesocial{
@@ -164,58 +161,19 @@ a{
 	font-family: "Love Ya Like A Sister";
 }
 
-.powered-logo img{
+.powered-logo{
 	height: 35px;
 	width: 35px;
 }
 
+header: after,
+header: before{
+	content: "";
+	display: table;
+	clear: both;
+}
+
 /* JS */
-.js-no-results{
-	font-family: "Love Ya Like A Sister";
-	text-align: center;
-	font-size: 14px;
-	margin-top: 70px;
-	margin-bottom: 120px;
-}
-
-.js-comic-results{
-	margin-top: -60px;
-}
-
-.charInfo{
-	text-align: center;
-	padding: 10px 20px;
-	margin: 20px 5px 20px 5px;
-	border-bottom: 2px solid brown;
-}
-
-.charThumbnail,
-.charData,
-#charYoutube101{
-	width: 100%;
-}
-
-.charThumbnail{
-	padding: 10px 10px;
-}
-
-.charData{
-	text-align: center;
-	padding: 10px 10px;
-}
-
-.charThumbnail img{
-	width: 200px;
-	height: 160px;
-	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
-}
-
-iframe{
-	width: 250px;
-	height: 130px;
-	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
-	margin-bottom: 20px;
-}
 
 h3{
 	font-family: "Love Ya Like A Sister";
@@ -231,15 +189,55 @@ li{
 	font-size: 12px;
 }
 
+iframe{
+	width: 250px;
+	height: 130px;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+	margin-bottom: 20px;
+}
+
+.js-no-results{
+	font-family: "Love Ya Like A Sister";
+	text-align: center;
+	font-size: 14px;
+	margin-top: 70px;
+	margin-bottom: 120px;
+}
+
+.js-comic-results{
+	margin-top: -60px;
+}
+
+.charInfo{
+	text-align: center;
+	padding: 10px 20px;
+	margin: 20px 5px;
+	border-bottom: 2px solid brown;
+}
+
+.charThumbnail{
+	padding: 10px;
+	width: 100%;
+}
+
+.charThumbnail img{
+	width: 200px;
+	height: 160px;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.charData{
+	text-align: center;
+	padding: 10px;
+	width: 100%;
+}
+
+#charYoutube101{
+	width: 100%;
+}
+
 /*----for tablets---*/
 @media only screen and (min-width: 767px){
-	.imageHolder{
-		height: 200px;
-		width: 100%;
-		background: url("../img/comic_img_768.jpg") no-repeat top;
-		background-size: cover;
-	}
-
 	header{
 		margin: 20px 0 40px 0;
 	}
@@ -250,7 +248,7 @@ li{
 	}
 
 	small{
-	font-size: 12px;
+		font-size: 12px;
 	}
 
 	nav ul{
@@ -265,7 +263,6 @@ li{
 	input{
 		height: 30px;
 		width: 200px;
-		margin-right: 5px;
 		font-size: 13px;
 	}
 
@@ -276,23 +273,36 @@ li{
 		font-size: 13px;
 	}
 
+	.topImage{
+		height: 200px;
+		background-image: url("../img/comics.jpg");
+	}
+
 	.sharesocial a{
   		font-size: 18px;
   		line-height: 18px;
   		padding: 5px;
-  		border-radius: 20%;
 	}
 
 	.power{
 		font-size: 16px;
 	}
 
-	.powered-logo img{
+	.powered-logo{
 		height: 50px;
 		width: 60px;
 	}
+		/* JS */
+	iframe{
+		width: 500px;
+		height: 250px;
+		box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5);
+	}
 
-	/* JS */
+	p, li{
+		font-size: 13px;
+	}
+
 	.js-comic-results{
 		width: 80%;
 		margin-left: auto;
@@ -304,46 +314,19 @@ li{
 		height: 220px;
 		box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5);
 	}
+}
 
-	iframe{
-		width: 500px;
-		height: 250px;
-		box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5);
-	}
-
-	p, li{
-		font-size: 13px;
-	}
-
-
+/*----for laptops or wider---*/
 @media only screen and (min-width: 1024px){
-	.imageHolder{
-		height: 100vh;
-		width: 100%;
-		background: url("../img/comic_img.jpg") no-repeat center fixed;
-		background-size: cover;
-	}
-
 	header{
 		padding: 10px 30px;
 		margin: 20px 0;
-		height: 100px;
 		text-align: left;
 	}
 
 	h1{
 		font-size: 50px;
 		height: 55px;
-	}
-
-	.powered-logo img{
-		height: 60px;
-		width: 70px;
-	}
-
-	.logo{
-		width: 45%;
-		float: left;
 	}
 
 	small{
@@ -369,16 +352,9 @@ li{
 		float: none;
 	}
 
-	header: after,
-	header: before{
-		content: "";
-		display: table;
-		clear: both;
-	}
-
 	form{
 		padding: 10px 0;
-		margin-bottom: 450px;
+		margin-bottom: 400px;
 	}
 
 	input{
@@ -395,6 +371,56 @@ li{
 		font-size: 16px;
 	}
 
+	.topImage{
+		background-image: none;
+		height: 350px;
+		background-color: black;
+		cursor: url('../img/hammer_cursor.png'), auto;
+	}
+
+	.imageHolder{
+		position:relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.comicsImage{
+		display: initial;
+		width: 100%;
+		height: 100%;
+	}
+
+	.comicsText{
+		font-family: 'Love Ya Like A Sister';
+		display: initial;
+		color: brown;
+  		transition: .4s ease;
+  		opacity: 0;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+	}
+
+	.powered-logo{
+		height: 60px;
+		width: 70px;
+	}
+
+	.logo{
+		width: 45%;
+		float: left;
+	}
+
+	.imageHolder:hover .comicsImage{
+  		opacity: 0.2;
+	}
+
+	.imageHolder:hover .comicsText{
+  		opacity: 1;
+  		font-size: 100px;
+	}
+
 	button:hover{
 		background-color: #CF6253;
 	}
@@ -405,8 +431,19 @@ li{
 	}
 
 	/* JS */
+	p, li{
+		font-size: 16px;
+	}
+
+	iframe{
+		width: 100%;
+		height: 90%;
+		box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .5);
+	}
+
 	.js-comic-results{
 		width: 100%;
+		margin-top: 50px;
 	}
 
 	.js-no-results{
@@ -414,13 +451,6 @@ li{
 		margin-bottom: 270px;
 		width: 100%;
 		font-size: 20px;
-	}
-
-	.charInfo:before,
-	.charInfo:after{
-		content: "";
-		display: table;
-		clear: both;
 	}
 
 	.charInfo{
@@ -436,10 +466,10 @@ li{
 		float: left;
 		text-align: right;
 		border-right: 2px solid brown;
+		cursor: url('../img/mini-hammer.png'), auto;
 	}
 
 	.charData{
-		text-align: center;
 		padding: 30px 20px;
 		width: 36%;
 		float: left;
@@ -466,36 +496,18 @@ li{
 		box-shadow: none;
 	}
 
-	.charThumbnail img:hover{
-		box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .4);
-	}
-
-	iframe{
-		width: 100%;
-		height: 90%;
-		box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .5);
-	}
-
-	li{
-		list-style-type: none;
-	}
-
-	p, li{
-		font-size: 16px;
-	}
-
-	.currentPage{
-		border-bottom: 3px solid brown;
+	.charInfo:before,
+	.charInfo:after{
+		content: "";
+		display: table;
+		clear: both;
 	}
 
 	.charThumbnail img:hover{
 		filter: hue-rotate(250deg);
 		opacity: 0.8;
+		box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, .4);
 
-	}
-
-	.marvelWiki, .purchaseComics{
-		color: brown;
-		font-weight: bold;
 	}
 }
+

@@ -72,6 +72,7 @@ function closeClick(){
 	$(".modal-movie-detail").on("click", ".close-modal", function (e){
 		e.preventDefault();
 		$(".modal-movie-detail").addClass("js-hide");
+		$('iframe').attr('src', '');
 	});
 }
 
@@ -159,6 +160,7 @@ function nextPageClick(){
 		if (pageCounter === 5){
 			$("#nextPage").addClass("js-hide");
 		}
+		$("body").animate({scrollTop: 250}, 500);
 	});
 }
 
@@ -170,6 +172,7 @@ function prevPageClick(){
 		if (pageCounter === 1){
 			$("#prevPage").addClass("js-hide");
 		}
+		$("body").animate({scrollTop: 250}, 500);
 	});
 }
 

@@ -2,7 +2,11 @@
 	box-sizing: border-box;
 	margin:0;
 	padding: 0;
-	/*border: 1px solid black;*/
+	/*border: 1px solid red;*/
+}
+
+header{
+	width: 100%;
 }
 
 body{
@@ -13,22 +17,16 @@ body{
 	color: #595454;
 }
 
-header, main, footer{
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
 h1{
-	margin-top: 20px;
-	font-size: 30px;
-}
-
-h3{
-	font-size: 10px;
+	font-size: 20px;
 }
 
 h2{
 	font-size: 15px;
+}
+
+h3{
+	font-size: 10px;
 }
 
 a{
@@ -40,11 +38,27 @@ footer{
 	margin-bottom: 10px;
 }
 
-.imageHolder{
-	height: 150px;
+.headerImage{
 	width: 100%;
-	background: url("../img/home_img_320.png") no-repeat center;
+	height: 150px;
+	background: url("../img/home_img_425.png") no-repeat center;
 	background-size: cover;
+}
+
+.imageShield{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.headerText{
+	width: 100%;
+	height: 100%;
+	padding: 10px 10px;
+}
+
+.headerText p{
+	display: none;
 }
 
 .media{
@@ -56,6 +70,10 @@ footer{
 
 .comics, .movies{
 	border-bottom: 3px solid brown;
+}
+
+.mediaImage{
+	display: none;
 }
 
 .sharesocial{
@@ -100,36 +118,43 @@ footer{
 	font-weight: bold;
 }
 
-.powered-logo img{
+.powered-logo{
 	height: 35px;
 	width: 35px;
 }
 
-/*--------media queries-------*/
-@media only screen and (min-width: 426px){
-	h1{
-		margin-top: 50px;
-		font-size: 50px;
-	}
+.headerImage:after{
+	content: "";
+	display: table;
+	clear: both;
+}
 
-	h3{
-		font-size: 18px;
+/*--MEDIA QUERY FOR TABLETS (MIN 435PX)--*/
+@media only screen and (min-width: 435px){
+	h1{
+		font-size: 50px;
 	}
 
 	h2{
 		font-size: 30px;
 	}
 
-	header, main, footer{
-		padding-right: 30px;
-		padding-left: 30px;
+	h3{
+		font-size: 18px;
 	}
 
-	.imageHolder{
-		height: 300px;
-		width: 100%;
-		background: url("../img/home_img.png") no-repeat center;
-		background-size: cover;
+	main, footer{
+		padding: 0 30px;
+	}
+
+	.headerImage{
+		height: 200px;
+		background-image: url("../img/avengers_logo_770.jpg");
+		background-color: black;
+	}
+
+	.headerText{
+		padding: 10px 15px;
 	}
 
 	.media{
@@ -147,59 +172,111 @@ footer{
   		font-size: 18px;
   		line-height: 18px;
   		padding: 5px;
-  		border-radius: 20%;
 	}
 
 	.power{
-		margin: 20px 0;
 		font-size: 16px;
-		font-weight: bold;
 	}
 
-	.powered-logo img{
+	.powered-logo{
 		height: 50px;
 		width: 60px;
 	}
 }
 
-
+/*--MEDIA QUERY FOR LAPTOPS AND BIGGER SCREENS (MIN 1024PX)--*/
 @media only screen and (min-width: 1024px){
-	h1{
-		height: 160px;
-		line-height: 200px;
-		font-size: 100px;
+	header{
+		height: 100vh;
+		background-color: black;
+		cursor: url('../img/hammer_cursor.png'), auto;
 	}
 
-	h3{
-		font-weight: bold;
-		font-size: 20px;
+	h1{
+		font-size: 80px;
+		margin-top: 50%;
 	}
 
 	h2{
-		line-height: 200px;
+		line-height: 300px;
+		color: brown;
+		cursor: url('../img/hammer_cursor.png'), auto;
+	}
+
+	h3{
+		font-size: 20px;
 	}
 
 	footer{
 		margin-bottom: 20px;
 	}
 
-	.imageHolder{
-		height: 100vh;
-		width: 100%;
-		background: url("../img/home_img.png") no-repeat center fixed;
-		background-size: cover;
+	.headerImage{
+		width: 60%;
+		height: 100%;
+		float: left;
+		background-image: none;
+	}
+
+	.imageShield{
+		border-radius: 50%;
+		margin: 15% 0;
+		height: 70%;
+		width: 90%;
+		display: initial;
+	}
+
+	.headerText{
+		width: 30%;
+		float: left;
+		color: #857474;
+	}
+
+	.headerText p{
+		display: initial;
+		line-height: 150px;
+		font-size: 20px;
+		font-style: italic;
+		font-weight: bolder;
+		color: brown;
 	}
 
 	.media{
-		width:33.33%;
+		width:33.30%;
 		float: left;
-		height: 200px;
-		margin: 80px 0;
+		height: 300px;
+		margin: 150px 0;
+	}
+
+	.mediaImage{
+		opacity: 1;
+		border-radius: 5%;
+  		display: block;
+  		width: 100%;
+  		height: 100%;
+  		transition: .5s ease;
+  		backface-visibility: hidden;
 	}
 
 	.comics, .movies{
-		border-right: 3px solid brown;
 		border-bottom: none;
+	}
+
+	.comics, .movies, .tv{
+		position:relative;
+		width: 100%;
+		height: 100%;
+		padding: 0 15px;
+	}
+
+	.comicsText, .moviesText, .tvText {
+		width: 100%;
+  		transition: .8s ease;
+  		opacity: 0;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
 	}
 
 	.power{
@@ -207,12 +284,16 @@ footer{
 		margin: 15px 0;
 	}
 
-	.powered-logo img{
+	.powered-logo{
 		height: 60px;
 		width: 70px;
 	}
 
-
+	header:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
 
 	main:before,
 	main:after{
@@ -221,9 +302,27 @@ footer{
 		clear: both;
 	}
 
+	.imageShield:hover{
+  		filter: hue-rotate(180deg);
+  		opacity: 0.8;
+	}
+
 	h2:hover{
 		font-size: 50px;
 		transition: .2s;
+	}
+
+	.comics:hover .mediaImage,
+	.movies:hover .mediaImage,
+	.tv:hover .mediaImage{
+  		opacity: 0.2;
+  		border-radius:10%;
+	}
+
+	.comics:hover .comicsText,
+	.movies:hover .moviesText,
+	.tv:hover .tvText{
+  		opacity: 1;
 	}
 
 	.fa:hover{
