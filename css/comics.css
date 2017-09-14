@@ -49,7 +49,7 @@ nav a{
 form{
 	text-align: center;
 	padding: 20px 0;
-	margin-bottom: 220px;
+	margin-bottom: 50px;
 }
 
 input{
@@ -80,6 +80,7 @@ button{
 main{
 	padding-left: 10px;
 	padding-right: 10px;
+	min-height: 150px;
 }
 
 a{
