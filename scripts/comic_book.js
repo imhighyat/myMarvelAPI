@@ -102,4 +102,6 @@ function searchTheChar(){
   });
 }
 
+
+
 $(searchTheChar); //calling the main function
