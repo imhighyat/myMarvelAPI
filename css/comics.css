@@ -354,7 +354,11 @@ iframe{
 
 	form{
 		padding: 10px 0;
-		margin-bottom: 400px;
+		margin-bottom: 0;
+	}
+
+	main{
+		min-height: 300px ;
 	}
 
 	input{

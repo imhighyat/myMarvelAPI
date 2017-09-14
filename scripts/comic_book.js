@@ -77,13 +77,24 @@ function displayVideo(item){
 }
 
 function searchTheChar(){
+  //When the document loads if a search query exists
+  //get the search key value from the url and transform it
+  let character;
+  if (location.search){
+    let params = new URLSearchParams(location.search);
+    character = params.get("q");
+    $("input").val(character);
+    getData(character, displayData);
+  }
   $(".js-query-form").submit(function (e){ //when search is clicked
     e.preventDefault(); //prevent submission of form
-    $("form").css("margin-bottom", "50px");
     const findInput = $(".js-query-form").find(".js-query"); //finds the input from user
-    const getInputValue = findInput.val(); //store the input in a variable
+    character = findInput.val(); //store the input in a variable
     findInput.val(""); //clears the input after button is clicked
-    getData(getInputValue, displayData);
+    getData(character, displayData);
+  });
+  $('.fa-twitter-square').on('click', function(e){
+    window.open(`https://twitter.com/intent/tweet?text=Get to know more about your preferred Marvel superhero. Click here https://imhighyat.github.io/myMarvelAPI/comic_books.html?q=${escape(character)}`)
   });
 }
 
