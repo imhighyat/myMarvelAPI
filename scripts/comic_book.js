@@ -96,6 +96,10 @@ function searchTheChar(){
   $('.fa-twitter-square').on('click', function(e){
     window.open(`https://twitter.com/intent/tweet?text=Get to know more about your preferred Marvel superhero. Click here https://imhighyat.github.io/myMarvelAPI/comic_books.html?q=${escape(character)}`)
   });
+  $('.fa-facebook-square').on('click', function(e){
+    https://www.facebook.com/sharer/sharer.php?u="+escape(window.location.href)+"&t="+document.title
+    window.open(`https://facebook.com/sharer/sharer.php?u=${escape(`https://imhighyat.github.io/myMarvelAPI/comic_books.html?q=${character}`)}&t=Get to know more about your preferred Marvel superhero.`)
+  });
 }
 
 $(searchTheChar); //calling the main function
