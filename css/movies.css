@@ -402,7 +402,7 @@ img.castPhoto{
 	#nextPage,
 	#prevPage{
 		height: 35px;
-		width: 30%;
+		width: 40%;
 		font-size: 16px;
 	}
 
@@ -522,7 +522,7 @@ img.castPhoto{
 	}
 
 	.pagination{
-		width: 30%;
+		width: 40%;
 		height: 40px;
 		margin: 30px auto;
 	}
