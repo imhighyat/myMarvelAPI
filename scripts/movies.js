@@ -180,6 +180,15 @@ function loadMovies(){
 	getMovieList(getMovieID);
 	nextPageClick();
 	prevPageClick();
+	$('.fa-twitter-square').on('click', function(e){
+  		window.open(`https://twitter.com/intent/tweet?text=Take a look at the movies featuring Marvel superheroes. Click here https://imhighyat.github.io/myMarvelAPI/movies.html`);
+  	});
+	$('.fa-facebook-square').on('click', function(e){
+  		window.open(`https://facebook.com/sharer/sharer.php?u=${escape(`https://imhighyat.github.io/myMarvelAPI/movies.html`)}&t=Take a look at the movies featuring Marvel superheroes.`);
+  	});
+  	$('.fa-pinterest-square').on('click', function(e){
+		window.open(`https://pinterest.com/pin/create/button/?url=${escape(`https://imhighyat.github.io/myMarvelAPI/movies.html`)}&media=${escape(`https://imhighyat.github.io/myMarvelAPI/img/home_movies.png`)}&description=Take a look at the movies featuring Marvel superheroes.`);
+	});
 }
 
 //main function

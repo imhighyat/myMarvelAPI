@@ -94,11 +94,14 @@ function searchTheChar(){
     getData(character, displayData);
   });
   $('.fa-twitter-square').on('click', function(e){
-    window.open(`https://twitter.com/intent/tweet?text=Get to know more about your preferred Marvel superhero. Click here https://imhighyat.github.io/myMarvelAPI/comic_books.html?q=${escape(character)}`)
+    window.open(`https://twitter.com/intent/tweet?text=Get to know more about your Marvel superheroes. Click here https://imhighyat.github.io/myMarvelAPI/comic_books.html?q=${escape(character)}`);
   });
   $('.fa-facebook-square').on('click', function(e){
-    https://www.facebook.com/sharer/sharer.php?u="+escape(window.location.href)+"&t="+document.title
-    window.open(`https://facebook.com/sharer/sharer.php?u=${escape(`https://imhighyat.github.io/myMarvelAPI/comic_books.html?q=${character}`)}&t=Get to know more about your preferred Marvel superhero.`)
+    //https://www.facebook.com/sharer/sharer.php?u="+escape(window.location.href)+"&t="+document.title
+    window.open(`https://facebook.com/sharer/sharer.php?u=${escape(`https://imhighyat.github.io/myMarvelAPI/comic_books.html?q=${character}`)}&t=Get to know more about your Marvel superheroes.`);
+  });
+  $('.fa-pinterest-square').on('click', function(e){
+    window.open(`https://pinterest.com/pin/create/button/?url=${escape(`https://imhighyat.github.io/myMarvelAPI/comic_books.html?q=${character}`)}&media=${escape(`https://imhighyat.github.io/myMarvelAPI/img/home_comics.jpg`)}&description=Get to know more about your Marvel superheroes.`);
   });
 }
 
