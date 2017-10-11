@@ -244,7 +244,7 @@ footer{
 	.media{
 		width:33.30%;
 		float: left;
-		height: 300px;
+		height: auto;
 		margin: 150px 0;
 	}
 

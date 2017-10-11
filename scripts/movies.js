@@ -160,7 +160,7 @@ function nextPageClick(){
 		if (pageCounter === 5){
 			$("#nextPage").addClass("js-hide");
 		}
-		$("body").animate({scrollTop: 250}, 500);
+		$("html, body").animate({scrollTop: 250}, 500);
 	});
 }
 
@@ -172,7 +172,7 @@ function prevPageClick(){
 		if (pageCounter === 1){
 			$("#prevPage").addClass("js-hide");
 		}
-		$("body").animate({scrollTop: 250}, 500);
+		$("html, body").animate({scrollTop: 250}, 500);
 	});
 }
 

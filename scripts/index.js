@@ -1,5 +1,5 @@
 $(".imageShield").click(function() {
-  $("body").animate({scrollTop: $(document).height()}, 1000);
+  $("html, body").animate({scrollTop: $(document).height()}, 1000);
 });
 
 $('.fa-twitter-square').on('click', function(e){
